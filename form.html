@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css" integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+  <div class="container">
+    <h1 class="text-primary mt-5 mb-4">Formulaire d'inscription</h1>
+
+    <form class="form">
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="nameInput" id="nameInput" class="form-control"  aria-describedby="emailHelp" placeholder="Tapez votre nom">
+
+      </div>
+
+      <div class="form-group">
+        <label for="surnameInput">Prénom</label>
+        <input type="surnameInput" id="surnameInput" class="form-control"  aria-describedby="emailHelp" placeholder="Tapez votre prénom">
+        <small id="namelHelp" class="form-text text-muted">Au moins 3 lettres</small>
+        <small id="emptySurname"></small>
+
+      </div>
+
+      <div class="form-group">
+        <label for="ageInput">Âge</label>
+        <input type="ageInput" id="ageInput" class="form-control"  aria-describedby="emailHelp" placeholder="Tapez votre âge">
+        <small id="emptyAge"></small>
+
+      </div>
+
+      <div class="form-group">
+        <label for="emailInput">Votre adresse mail</label>
+        <input type="emailInput" id="emailInput" class="form-control" aria-describedby="emailHelp" placeholder="Tapez votre email">
+      </div>
+
+      <div class="form-group">
+        <label for="emailConfirmationInput">Confirmation de l'adresse mail</label>
+        <input type="emailConfirmationInput" id="emailConfirmationInput" class="form-control" aria-describedby="emailHelp" placeholder="Confirmez votre email">
+        <small id="emptyEmail"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="passwordInput">Mot de passe</label>
+        <input type="passwordInput" id="passwordInput" class="form-control" aria-describedby="emailHelp" placeholder="Tapez votre mot de passe">
+        <small id="passwordHelp" class="form-text text-muted">Au moins 6 caractères</small>
+      </div>
+
+      <div class="form-group">
+        <label for="passwordConfirmationInput">Confirmation du mot de passe</label>
+        <input type="passwordConfirmationInput" id="passwordConfirmationInput" class="form-control"aria-describedby="emailHelp" placeholder="Confirmez votre mot de passe">
+        <small id="emptyPassword"></small>
+      </div>
+
+      <div class="form-group">
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+          <label class="custom-control-label" for="customSwitch1">Accepter les conditions d'utilisation</label>
+        </div>
+      </div>
+      <small id="emptyCGU"></small>
+
+      <input id="formButton" class="btn btn-primary btn-lg btn-block mt-4" value="Validez">
+
+    </form>
+
+  </div>
+
+
+    <script type="text/javascript" src="validator.js"></script>
+
+</body>
+</html>

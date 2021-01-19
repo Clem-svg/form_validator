@@ -62,7 +62,6 @@ const emailMatchConfirmation = () => {
     emptyError.innerHTML = " ";
     return true
   } else if (userEmail.value == userConfirmationEmail.value && !regexEmail.test(userEmail.value)){
-    console.log(userEmail.value)
     userEmail.className ="form-control is-invalid"
     userConfirmationEmail.className ="form-control is-invalid"
     emptyError.innerHTML = "Attention, votre adrese mail ne respecte pas le format mail";
@@ -83,12 +82,12 @@ const passwordMatchConfirmation = () => {
   const userConfirmationPassword = document.getElementById('passwordConfirmationInput');
   const emptyError = document.getElementById('emptyPassword');
 
-  if (userPassword.value == userConfirmationPassword.value && userPassword.length >= 6){
+  if (userPassword.value == userConfirmationPassword.value && userPassword.value.length >= 6){
     userPassword.className ="form-control is-valid"
     userConfirmationPassword.className ="form-control is-valid"
     emptyError.innerHTML = " ";
     return true
-  } else if (userPassword.value == userConfirmationPassword.value && userPassword.length < 6){
+  } else if (userPassword.value == userConfirmationPassword.value && userPassword.value.length < 6){
     userPassword.className ="form-control is-invalid"
     userConfirmationPassword.className ="form-control is-invalid"
     emptyError.innerHTML = "Attention, votre mot de passe doit contenir au moins 6 caractères";

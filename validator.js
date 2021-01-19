@@ -34,22 +34,21 @@ const isSurnameCorrect = () => {
 }
 
 
-const isAgeOver18 = () => {
-  const userAge = document.getElementById('ageInput')
-  const emptyError = document.getElementById('emptyAge')
+  const isAgeOver18 = () => {
+    const userAge = document.getElementById('ageInput')
+    const emptyError = document.getElementById('emptyAge')
 
 
-    if (userAge.value >= 18){
-      userAge.className ="form-control is-valid"
-      emptyError.innerHTML = "";
+      if (userAge.value >= 18){
+        userAge.className ="form-control is-valid"
+        emptyError.innerHTML = "";
 
-    } else {
-      userAge.className ="form-control is-invalid"
-      emptyError.innerHTML = "Vous devez être majeur.e";
-      emptyError.style.color ="red"
+      } else {
+        userAge.className ="form-control is-invalid"
+        emptyError.innerHTML = "Vous devez être majeur.e";
+        emptyError.style.color ="red"
+      }
     }
-
-}
 
 const emailMatchConfirmation = () => {
   const userEmail = document.getElementById('emailInput');
